@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+
+:root {
+    --blue: #47B5FF;
+    --black: #26282B;
+    --grey: #353941;
+    --yellow: #FFC107;
+    --white: #FFFFFF;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  .lexend {
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  body {
+      margin: 0;
+      padding: 0;
+  }
+  
+  p {
+      margin: 0;
+      padding: 0;
+      text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  a {
+    text-decoration: none;
+  }  
+
+.category-title h2 {
+    text-align: center;
+    color: white;
+    text-shadow:0 4px 8px rgba(0, 0, 0, 0.5);
+    font-size: 1.9rem;
+  }
+
+  .category-background {
+    background-color: #26282B;
+    margin-top: 7rem;
+  }
+
+  .category-left {
+    padding-left: 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+  .category-random-button {
+    background-color: var(--blue);
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+
+  .category-random-button:hover {
+    background-color: #353941;
+    color: var(--blue);
+    animation-duration: 0.5s;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+
+.category-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    width: 71.875rem;
+    max-width: 100rem;
+    justify-content: flex-start;
+    margin: 0 auto;
+}
+
+.category-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.category-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@media screen and (min-width: 0px) and (max-width: 767px) {
+  .category-list {
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto;
+    margin: 0 auto;
+  }
+
+  .category-left {
+    /* border: 1px solid red; */
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .category-random-button {
+    font-size: 15px;
+  }
+
+  .category-background {
+    margin-top: 90px;
+  }
+
+  .category-title h2 {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .category-list {
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto auto;
+    margin: 0 auto;
+}
+}

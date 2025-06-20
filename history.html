@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieTime - History</title>
+    <link rel="icon" href="Assets/HeaderPhoto/logo.png">
+    <link rel="stylesheet" href="CSS/history.css">
+    <link rel="stylesheet" href="CSS/Header.css">
+    <link rel="stylesheet" href="CSS/Footer.css">
+    <link rel="stylesheet" href="CSS/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel = "stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+        <link rel = "stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Marko+One&display=swap" rel="stylesheet">
+</head>
+<body class="MainBackground">
+    <header>
+        <a href="home.html" class="movielogo"> 
+            <img class="logomovie" src="Assets/HeaderPhoto/logo.png">
+            <h2>MovieTime</h2>
+        </a>
+        <nav>
+            <ul class="navigation">
+                <li class="top"><a href="home.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Category</a>
+                    <ul class="dropdown-content">
+                        <a href="category.html?genre=Action">Action</a>
+                        <a href="category.html?genre=Adventure">Adventure</a>
+                        <a href="category.html?genre=Animation">Animation</a>
+                        <a href="category.html?genre=Comedy">Comedy</a>
+                        <a href="category.html?genre=Drama">Drama</a>
+                        <a href="category.html?genre=Fantasy">Fantasy</a>
+                        <a href="category.html?genre=Horror">Horror</a>
+                        <a href="category.html?genre=Romance">Romance</a>
+                        <a href="category.html?genre=Thriller">Thriller</a>
+                    </ul>
+                </li>
+                <li><a href="history.html"><p class="page-is-clicked">History</p></a></li>
+                <li><a href="watchlist.html">Watchlist</a></li>
+                <li><a href="community.html">Community</a></li>
+            </ul>
+        </nav>
+
+        <div class="rightnav">
+            <div class="search">
+                <form>
+                    <input type="text" placeholder="Search..." id="searchInput">
+                </form>
+                <img src="Assets/HeaderPhoto/search.png" id="searchButton" onclick="goToSearch()">
+            </div>
+
+            <div class="profile dropdown">
+                <img src="Assets/HeaderPhoto/profileicon.png" class="profil" id="profileIcon">
+                <div class="dropdown-profile" id="dropdownMenu">
+                    <a href="login.html" id="logoutLink"><img src="Assets/HeaderPhoto/logout.png" id="logoutIcon"><span class="logout-text">Logout</span></a>
+                </div>
+            </div>          
+            
+            <div class="bx bx-menu" id="icon"></div>
+        </div>
+
+    </header>
+    <h1 class="WebTitle">History</h1>
+    <div class="MainHistory">
+        <div class="Today" id="TodayCategory">
+            <p class="SubJudul1 lexend" id="SubJudul1">Today</p>
+
+            
+            <div class="history-card" id="History1">
+                <div class="history-card-left">
+                    <img class="history-card-poster" src="https://assets.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/2023/05/17/03-fnf-dm-mobile-banner-1080x745-km-f01-0516231-64643a789a42a-1-384134179.png" alt="">
+                    <img class="history-play-button" onclick="goToMovieDetail('Five Nights at Freddys')" src="Assets/Icon/PlayButton.png" alt="">
+                </div>
+                <div class="history-card-right">
+                    <div class="history-card-top-detail">
+                        <div class="history-desc-container">
+                            <p class="title-section lexend">Five Nights at Freddy's</p>
+                            <p class="date-section lexend">April 2, 2024</p>
+                        </div>
+                        <p class="delete-button-section lexend" id="open-popup1">×</p>
+                    </div>
+                    <p class="progress-section lexend">Watched 34%</p>
+                </div>
+            </div>
+            
+
+            <div class="history-card" id="History2">
+                <div class="history-card-left">
+                    <img class="history-card-poster" src="https://i0.wp.com/2.bp.blogspot.com/-XmACHofjfTc/VCQGLtltVQI/AAAAAAAAAC8/FHhoheFlWZ0/s1600/interstellar%2Bnew%2Bbanner.jpg" alt="" width="299.15px" height="200px" style="border-radius: 10px;">
+                    <img class="history-play-button" onclick="goToMovieDetail('Interstellar')" src="Assets/Icon/PlayButton.png" alt="" width="55px" height="50px">
+                </div>
+                <div class="history-card-right">
+                    <div class="history-card-top-detail">
+                        <div class="history-desc-container">
+                            <p class="title-section lexend" >Interstellar</p>
+                            <p class="date-section lexend">April 2, 2024</p>
+                        </div>
+                        <p class="delete-button-section lexend" id="open-popup2">×</p>
+                    </div>
+                    <p class="progress-section lexend">Completed</p>
+                </div>
+            </div>
+
+        <div class="Yesterday" id="YesterdayCatergory">
+            <p class="SubJudul1 lexend" id="SubJudul2">Yesterday</p>
+            <div class="history-card" id="History3">
+                <div class="history-card-left">
+                    <img class="history-card-poster" src="https://i.ytimg.com/vi/3sHxvyk57jY/maxresdefault.jpg" alt="" width="299.15px" height="200px" style="border-radius: 10px;">
+                    <img class="history-play-button" onclick="goToMovieDetail('Spy × Family Code: White')" src="Assets/Icon/PlayButton.png" alt="" width="55px" height="50px">
+                </div>
+                <div class="history-card-right">
+                    <div class="history-card-top-detail">
+                        <div class="history-desc-container">
+                            <p class="title-section lexend">Spy × Family Code: White</p>
+                            <p class="date-section lexend">April 1, 2024</p>
+                        </div>
+                        <p class="delete-button-section lexend" id="open-popup3">×</p>
+                    </div>
+                    <p class="progress-section lexend">Watched 32%</p>
+                </div>
+            </div>
+            
+            <div class="history-card" id="History10">
+                <div class="history-card-left">
+                    <img class="history-card-poster" src="https://cinemags.org/wp-content/uploads/2020/09/eric-yoo-in-na-im-joo-hwan-the-spy-who-loved-me.jpg" alt="" width="299.15px" height="200px" style="border-radius: 10px;">
+                    <img class="history-play-button" onclick="goToMovieDetail('The Spy Who Loved Me')" src="Assets/Icon/PlayButton.png" alt="" width="55px" height="50px">
+                </div>
+                <div class="history-card-right">
+                    <div class="history-card-top-detail">
+                        <div class="history-desc-container">
+                            <p class="title-section lexend">The Spy Who Loved Me</p>
+                            <p class="date-section lexend">April 1, 2024</p>
+                        </div>
+                        <p class="delete-button-section lexend" id="open-popup10">×</p>
+                    </div>
+                    <p class="progress-section lexend">Completed</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="Earlier" id="earlierCatergory">
+            <p class="SubJudul1 lexend" id="SubJudul3">Earlier</p>
+            <div class="history-card" id="History4">
+                <div class="history-card-left">
+                    <img class="history-card-poster" src="https://occ-0-2794-2219.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABeJPNIe7kURaDKAF_UGH53b99ylf-rWGpS9epVPk40jkZj4XlbPeOowz6N46pzRVyulkjWnBIjFmBb4MXnEBRyHy-CFNyUH_N85Dyc9l6VTEPFbEzLbbbLsHl9uY4ErqHNOTcQ.jpg?r=1b4" alt="" width="299.15px" height="200px" style="border-radius: 10px;">
+                    <img class="history-play-button" onclick="goToMovieDetail('20th Century Girl')" src="Assets/Icon/PlayButton.png" alt="" width="55px" height="50px">
+                </div>
+                <div class="history-card-right">
+                    <div class="history-card-top-detail">
+                        <div class="history-desc-container">
+                            <p class="title-section lexend">20th Century Girl</p>
+                            <p class="date-section lexend">Maret 29, 2024</p>
+                        </div>
+                        <p class="delete-button-section lexend" id="open-popup4">×</p>
+                    </div>
+                    <p class="progress-section lexend">Watched 41%</p>
+                </div>
+            </div>
+            
+            <div class="history-card" id="History5">
+                <div class="history-card-left">
+                    <img class="history-card-poster" src="https://cdn1-production-images-kly.akamaized.net/hXcfjWTmbl_22GVCnQv_nq174-g=/800x450/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4572214/original/087847000_1694502431-SVOD_-_Wild_Card_-_Alt_C_-_Landscape.jpg" alt="" width="299.15px" height="200px" style="border-radius: 10px;">
+                    <img class="history-play-button" onclick="goToMovieDetail('Wild Card')" src="Assets/Icon/PlayButton.png" alt="" width="55px" height="50px">
+                </div>
+                <div class="history-card-right">
+                    <div class="history-card-top-detail">
+                        <div class="history-desc-container">
+                            <p class="title-section lexend">Wild Card</p>
+                            <p class="date-section lexend">Maret 29, 2024</p>
+                        </div>
+                        <p class="delete-button-section lexend" id="open-popup5">×</p>
+                    </div>
+                    <p class="progress-section lexend">Completed</p>
+                </div>
+            </div>
+            
+            <div class="history-card" id="History6">
+                <div class="history-card-left">
+                    <img class="history-card-poster" src="https://occ-0-2794-2219.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABd4Ly4log4uLNV3dn2ENHGGBw_Ts1xyP5l_8MO3KBNZTeR58DPKmOg1mSB480jK4RlrbR5CO9CqGLjrx-kYn43yWL56RujRPnxBbh25jhqyMu3Tthz12t2rUv0HtFFOfboQgoQ.webp?r=7c8" alt="" width="299.15px" height="200px" style="border-radius: 10px;">
+                    <img class="history-play-button" onclick="goToMovieDetail('Rebel Moon')" src="Assets/Icon/PlayButton.png" alt="" width="55px" height="50px">
+                </div>
+                <div class="history-card-right">
+                    <div class="history-card-top-detail">
+                        <div class="history-desc-container">
+                            <p class="title-section lexend">Rebel Moon</p>
+                            <p class="date-section lexend">Maret 28, 2024</p>
+                        </div>
+                        <p class="delete-button-section lexend" id="open-popup6">×</p>
+                    </div>
+                    <p class="progress-section lexend">Watched 55%</p>
+                </div>
+            </div>
+            
+            <div class="history-card" id="History7">
+                <div class="history-card-left">
+                    <img class="history-card-poster" src="https://mrwallpaper.com/images/hd/weathering-with-you-sunset-poster-2ffcv3igp4wu0ttw.jpg" alt="" width="299.15px" height="200px" style="border-radius: 10px;">
+                    <img class="history-play-button" onclick="goToMovieDetail('Weathering with You')" src="Assets/Icon/PlayButton.png" alt="" width="55px" height="50px">
+                </div>
+                <div class="history-card-right">
+                    <div class="history-card-top-detail">
+                        <div class="history-desc-container">
+                            <p class="title-section lexend">Weathering with You</p>
+                            <p class="date-section lexend">Maret 28, 2024</p>
+                        </div>
+                        <p class="delete-button-section lexend" id="open-popup7">×</p>
+                    </div>
+                    <p class="progress-section lexend">Watched 41%</p>
+                </div>
+            </div>
+            
+            <div class="history-card" id="History8">
+                <div class="history-card-left">
+                    <img class="history-card-poster" src="https://m.media-amazon.com/images/I/71oeH+pkAeS.jpg" alt="" width="299.15px" height="200px" style="border-radius: 10px;">
+                    <img class="history-play-button" onclick="goToMovieDetail('A Silent Voice')" src="Assets/Icon/PlayButton.png" alt="" width="55px" height="50px">
+                </div>
+                <div class="history-card-right">
+                    <div class="history-card-top-detail">
+                        <div class="history-desc-container">
+                            <p class="title-section lexend">A Silent Voice</p>
+                            <p class="date-section lexend">Maret 27, 2024</p>
+                        </div>
+                        <p class="delete-button-section lexend" id="open-popup8">×</p>
+                    </div>
+                    <p class="progress-section lexend">Completed</p>
+                </div>
+            </div>
+            
+            <div class="history-card" id="History9">
+                <div class="history-card-left">
+                    <img class="history-card-poster" src="https://heartoppayasays.files.wordpress.com/2016/04/4627_descendantsofthesun_nowplay_small.jpg" alt="" width="299.15px" height="200px" style="border-radius: 10px;">
+                    <img class="history-play-button" onclick="goToMovieDetail('Descendants of the Sun')" src="Assets/Icon/PlayButton.png" alt="" width="55px" height="50px">
+                </div>
+                <div class="history-card-right">
+                    <div class="history-card-top-detail">
+                        <div class="history-desc-container">
+                            <p class="title-section lexend">Descendants of the Sun</p>
+                            <p class="date-section lexend">Maret 26, 2024</p>
+                        </div>
+                        <p class="delete-button-section lexend" id="open-popup9">×</p>
+                    </div>
+                    <p class="progress-section lexend">Watched 41%</div>
+                </div>
+            </div>
+            <p class="Empty-Text lexend" id="Empty-Texts">Your History is Empty :(</p>
+        </div>
+        
+
+        <!-- Buat pop up aja -->
+        <!-- Popup 1 -->
+       <div class="histPopup" id="histPopup1">
+        <div class="histOverlay"></div>
+        <div class="histPopUpDesc">
+            <div class="His-Pop-UpBtn">
+                <p class="dltBtnPops" style="cursor: pointer;">×</p>
+            </div>
+            <div class="His-Pop-Desc">
+                <p class="histPopDesc lexend">Are you sure you want to remove Five Nights at Freddy's from your history?</p>
+            </div>
+            <div class="histPopBtn lexend">
+                <button class="YesBtn lexend" id="popUpConfirm1" onclick="hisShowHide(History1)">
+                    <p class="Yes-Btn-Text lexend">
+                        Yes, remove this title
+                    </p>
+                </button>
+                <button class="CancelBtn lexend">Cancel</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="histPopup" id="popUpCon1">
+        <div class="histOverlay"></div>
+        <div class="histPopUpDesc">
+            <div class="His-Pop-UpBtn2">
+                <p class="dltBtnPops lexend" style="cursor: pointer;">×</p>
+            </div>
+            <div class="His-Pop-Desc2">
+                <p class="histPopDesc lexend">Five Nights at Freddy's has been successfully removed from your history.</p>
+            </div>
+        </div>
+    </div>
+
+        <!-- Popup 2 -->
+    <div class="histPopup" id="histPopup2">
+        <div class="histOverlay"></div>
+        <div class="histPopUpDesc">
+            <div class="His-Pop-UpBtn">
+                <p class="dltBtnPops" style="cursor: pointer;">×</p>
+            </div>
+            <div class="His-Pop-Desc">
+                <p class="histPopDesc lexend">Are you sure you want to remove Interstellar from your history?</p>
+            </div>
+            <div class="histPopBtn lexend">
+                <button class="YesBtn lexend" id="popUpConfirm2" onclick="hisShowHide(History2)">
+                    <p class="Yes-Btn-Text lexend">
+                        Yes, remove this title
+                    </p>
+                </button>
+                <button class="CancelBtn lexend">Cancel</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="histPopup" id="popUpCon2">
+        <div class="histOverlay"></div>
+        <div class="histPopUpDesc">
+            <div class="His-Pop-UpBtn2">
+                <p class="dltBtnPops lexend" style="cursor: pointer;">×</p>
+            </div>
+            <div class="His-Pop-Desc2">
+                <p class="histPopDesc lexend">Interstellar has been successfully removed from your history.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Popup 3 -->
+    <div class="histPopup" id="histPopup3">
+        <div class="histOverlay"></div>
+        <div class="histPopUpDesc">
+            <div class="His-Pop-UpBtn">
+                <p class="dltBtnPops" style="cursor: pointer;">×</p>
+            </div>
+            <div class="His-Pop-Desc">
+                <p class="histPopDesc lexend">Are you sure you want to remove Spy × Family Code: White from your history?</p>
+            </div>
+            <div class="histPopBtn lexend">
+                <button class="YesBtn lexend" id="popUpConfirm3" onclick="hisShowHide2(History3)">
+                    <p class="Yes-Btn-Text lexend">
+                        Yes, remove this title
+                    </p>
+                </button>
+                <button class="CancelBtn lexend">Cancel</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="histPopup" id="popUpCon3">
+        <div class="histOverlay"></div>
+        <div class="histPopUpDesc">
+            <div class="His-Pop-UpBtn2">
+                <p class="dltBtnPops lexend" style="cursor: pointer;">×</p>
+            </div>
+            <div class="His-Pop-Desc2">
+                <p class="histPopDesc lexend">Spy × Family Code: White has been successfully removed from your history.</p>
+            </div>
+        </div>
+    </div>
+    
+        <!-- Popup 4 -->
+    <div class="histPopup" id="histPopup4">
+        <div class="histOverlay"></div>
+        <div class="histPopUpDesc">
+            <div class="His-Pop-UpBtn">
+                <p class="dltBtnPops" style="cursor: pointer;">×</p>
+            </div>
+            <div class="His-Pop-Desc">
+                <p class="histPopDesc lexend">Are you sure you want to remove 20th Century Girl from your history?</p>
+            </div>
+            <div class="histPopBtn lexend">
+                <button class="YesBtn lexend" id="popUpConfirm4" onclick="hisShowHide3(History4)">
+                    <p class="Yes-Btn-Text lexend">
+                        Yes, remove this title
+                    </p>
+                </button>
+                <button class="CancelBtn lexend">Cancel</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="histPopup" id="popUpCon4">
+        <div class="histOverlay"></div>
+        <div class="histPopUpDesc">
+            <div class="His-Pop-UpBtn2">
+                <p class="dltBtnPops lexend" style="cursor: pointer;">×</p>
+            </div>
+            <div class="His-Pop-Desc2">
+                <p class="histPopDesc lexend">20th Century Girl has been successfully removed from your history.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Popup 5 -->
+    <div class="histPopup" id="histPopup5">
+        <div class="histOverlay"></div>
+        <div class="histPopUpDesc">
+            <div class="His-Pop-UpBtn">
+                <p class="dltBtnPops" style="cursor: pointer;">×</p>
+            </div>
+            <div class="His-Pop-Desc">
+                <p class="histPopDesc lexend">Are you sure you want to remove Wild Card from your history?</p>
+            </div>
+            <div class="histPopBtn lexend">
+                <button class="YesBtn lexend" id="popUpConfirm5" onclick="hisShowHide3(History5)">
+                    <p class="Yes-Btn-Text lexend">
+                        Yes, remove this title
+                    </p>
+                </button>
+                <button class="CancelBtn lexend">Cancel</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="histPopup" id="popUpCon5">
+        <div class="histOverlay"></div>
+        <div class="histPopUpDesc">
+            <div class="His-Pop-UpBtn2">
+                <p class="dltBtnPops lexend" style="cursor: pointer;">×</p>
+            </div>
+            <div class="His-Pop-Desc2">
+                <p class="histPopDesc lexend">Wild Card has been successfully removed from your history.</p>
+            </div>
+        </div>
+    </div>
+    
+    
+       <!-- Popup 6 -->
+    <div class="histPopup" id="histPopup6">
+        <div class="histOverlay"></div>
+        <div class="histPopUpDesc">
+            <div class="His-Pop-UpBtn">
+                <p class="dltBtnPops" style="cursor: pointer;">×</p>
+            </div>
+            <div class="His-Pop-Desc">
+                <p class="histPopDesc lexend">Are you sure you want to remove Rebel Moon from your history?</p>
+            </div>
+            <div class="histPopBtn lexend">
+                <button class="YesBtn lexend" id="popUpConfirm6" onclick="hisShowHide3(History6)">
+                    <p class="Yes-Btn-Text lexend">
+                        Yes, remove this title
+                    </p>
+                </button>
+                <button class="CancelBtn lexend">Cancel</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="histPopup" id="popUpCon6">
+        <div class="histOverlay"></div>
+        <div class="histPopUpDesc">
+            <div class="His-Pop-UpBtn2">
+                <p class="dltBtnPops lexend" style="cursor: pointer;">×</p>
+            </div>
+            <div class="His-Pop-Desc2">
+                <p class="histPopDesc lexend">Rebel Moon has been successfully removed from your history.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Popup 7 -->
+    <div class="histPopup" id="histPopup7">
+        <div class="histOverlay"></div>
+        <div class="histPopUpDesc">
+            <div class="His-Pop-UpBtn">
+                <p class="dltBtnPops" style="cursor: pointer;">×</p>
+            </div>
+            <div class="His-Pop-Desc">
+                <p class="histPopDesc lexend">Are you sure you want to remove Weathering with You from your history?</p>
+            </div>
+            <div class="histPopBtn lexend">
+                <button class="YesBtn lexend" id="popUpConfirm7" onclick="hisShowHide3(History7)">
+                    <p class="Yes-Btn-Text lexend">
+                        Yes, remove this title
+                    </p>
+                </button>
+                <button class="CancelBtn lexend">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="histPopup" id="popUpCon7">
+        <div class="histOverlay"></div>
+        <div class="histPopUpDesc">
+            <div class="His-Pop-UpBtn2">
+                <p class="dltBtnPops lexend" style="cursor: pointer;">×</p>
+            </div>
+            <div class="His-Pop-Desc2">
+                <p class="histPopDesc lexend">Weathering with You has been successfully removed from your history.</p>
+            </div>
+        </div>
+    </div>
+        
+        <!-- Popup 8 -->
+    <div class="histPopup" id="histPopup8">
+        <div class="histOverlay"></div>
+        <div class="histPopUpDesc">
+            <div class="His-Pop-UpBtn">
+                <p class="dltBtnPops" style="cursor: pointer;">×</p>
+            </div>
+            <div class="His-Pop-Desc">
+                <p class="histPopDesc lexend">Are you sure you want to remove A Silent Voice from your history?</p>
+            </div>
+            <div class="histPopBtn lexend">
+                <button class="YesBtn lexend" id="popUpConfirm8" onclick="hisShowHide3(History8)">
+                    <p class="Yes-Btn-Text lexend">
+                        Yes, remove this title
+                    </p>
+                </button>
+                <button class="CancelBtn lexend">Cancel</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="histPopup" id="popUpCon8">
+        <div class="histOverlay"></div>
+        <div class="histPopUpDesc">
+            <div class="His-Pop-UpBtn2">
+                <p class="dltBtnPops lexend" style="cursor: pointer;">×</p>
+            </div>
+            <div class="His-Pop-Desc2">
+                <p class="histPopDesc lexend">A Silent Voice has been successfully removed from your history.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Popup 9 -->
+    <div class="histPopup" id="histPopup9">
+        <div class="histOverlay"></div>
+        <div class="histPopUpDesc">
+            <div class="His-Pop-UpBtn">
+                <p class="dltBtnPops" style="cursor: pointer;">×</p>
+            </div>
+            <div class="His-Pop-Desc">
+                <p class="histPopDesc lexend">Are you sure you want to remove Descendants of the Sun from your history?</p>
+            </div>
+            <div class="histPopBtn lexend">
+                <button class="YesBtn lexend" id="popUpConfirm9" onclick="hisShowHide3(History9)">
+                    <p class="Yes-Btn-Text lexend">
+                        Yes, remove this title
+                    </p>
+                </button>
+                <button class="CancelBtn lexend">Cancel</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="histPopup" id="popUpCon9">
+        <div class="histOverlay"></div>
+        <div class="histPopUpDesc">
+            <div class="His-Pop-UpBtn2">
+                <p class="dltBtnPops lexend" style="cursor: pointer;">×</p>
+            </div>
+            <div class="His-Pop-Desc2">
+                <p class="histPopDesc lexend">Descendants of the Sun has been successfully removed from your history.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Popup 10 -->
+    <div class="histPopup" id="histPopup10">
+        <div class="histOverlay"></div>
+        <div class="histPopUpDesc">
+            <div class="His-Pop-UpBtn">
+                <p class="dltBtnPops" style="cursor: pointer;">×</p>
+            </div>
+            <div class="His-Pop-Desc">
+                <p class="histPopDesc lexend">Are you sure you want to remove The Spy Who Loved Me from your history?</p>
+            </div>
+            <div class="histPopBtn lexend">
+                <button class="YesBtn lexend" id="popUpConfirm10" onclick="hisShowHide2(History10)">
+                    <p class="Yes-Btn-Text lexend">
+                        Yes, remove this title
+                    </p>
+                </button>
+                <button class="CancelBtn lexend">Cancel</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="histPopup" id="popUpCon10">
+        <div class="histOverlay"></div>
+        <div class="histPopUpDesc">
+            <div class="His-Pop-UpBtn2">
+                <p class="dltBtnPops lexend" style="cursor: pointer;">×</p>
+            </div>
+            <div class="His-Pop-Desc2">
+                <p class="histPopDesc lexend">The Spy Who Loved Me has been successfully removed from your history.</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer>
+
+        <div class="social">
+            <div class="social-wrapper">
+                <a target="_blank" href="https://www.instagram.com/movietime.id"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="social-wrapper">
+                <a target="_blank" href="https://www.discord.com/movietime.id"><i class="fab fa-discord"></i></a>
+            </div>
+            <div class="social-wrapper">
+                <a target="_blank" href="https://www.youtube.com/movietime.id"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="social-wrapper">
+                <a target="_blank" href="https://www.twitter.com/movietime.id"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="social-wrapper">
+                <a target="_blank" href="https://www.facebook.com/movietime.id"><i class="fab fa-facebook"></i></a>
+            </div>
+            
+        </div>
+        
+        <div class="foot">
+            <p>© 2024 MovieTime. All Rights Reserved.</p>
+        </div>
+
+    </footer>
+    <!-- Pop up doang -->
+</body>
+<script src="JavaScripts/Header.js"></script>
+<script src="JavaScripts/history.js"></script>
+<script>
+    function goToMovieDetail(title) {
+    window.location.href = 'watch.html?title=' + encodeURIComponent(title);
+    }
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const selectedMovieTitle = urlParams.get('title');
+    showMovieDetailByTitle(selectedMovieTitle);
+</script>
+<script>
+    function goToSearch() {
+        const searchText = document.getElementById('searchInput').value;
+        if(searchText.length > 0){
+                window.location.href = 'search.html?search=' + encodeURIComponent(searchText);
+                document.getElementById('searchInput').value = "";
+        }
+    }   
+
+    function handleKeyPress(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            goToSearch();
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const searchInput = document.getElementById('searchInput');
+        searchInput.addEventListener('keypress', handleKeyPress);
+    });
+</script>
+</html>
